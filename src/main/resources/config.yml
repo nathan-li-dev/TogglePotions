@@ -1,0 +1,45 @@
+# USAGE:
+# Users can toggle commands with togglepotion <effect> <level>
+# This requires the permission togglepotions.<effect>.<level>
+# as well as the permission togglepotion.use
+
+# You can add "synonyms" for the plugin in the potionMap file
+
+# COMMANDS
+# Command                         : permission                     : description
+# togglepotion reload             : togglepotion.reload            : Reloads the config
+# togglepotion <effect> <level>   : togglepotion.use               : Applies an effect. For permissions, use lowercase version of effect found here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html
+#                                   togglepotion.<effect>.<level>    Users using the command can use any synonym found in the potionMap.txt file
+# OTHER PERMISSIONS
+# Permission                      : effect
+# togglepotion.<effect>.*         : allows user to apply any level of this potion to themselves... You probably don't want to give this to anyone.
+#
+# TIP
+# Add aliases to commands with the server's commands.yml file (found in the server root folder). For example, adding the following entry
+# into aliases will add a command, /glow, which toggles level 1 of glowing for a user.
+#
+# glow:
+#   - togglepotion glowing
+
+messages:
+  # If false, will send messages to chat
+  actionBar: true
+
+  invalidPotionInput: "&bTogglePotions &8&l> &7You entered an invalid potion name."
+  invalidNumberInput: "&bTogglePotions &8&l> &7You entered an invalid potion level."
+  noPermission: "&bTogglePotions &8&l> &7You don't have permission to do this."
+  reloaded: "&bTogglePotions &8&l> &7Config has been reloaded."
+  usage: "&bTogglePotions &8&l> &7Proper usage: /toggle [potion] [<level=0>]"
+  toggledOn: "&bTogglePotions &8&l> &7Potion effect has been toggled on."
+  toggledOff: "&bTogglePotions &8&l> &7Potion effect has been toggled off."
+
+sounds:
+  enable: true
+  toggleOn:
+    sound: "BLOCK_NOTE_BLOCK_HARP"
+    volume: 1
+    pitch: 1
+  toggleOff:
+    sound: "BLOCK_NOTE_BLOCK_HARP"
+    volume: 1
+    pitch: 0

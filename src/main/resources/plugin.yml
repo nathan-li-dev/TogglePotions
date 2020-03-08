@@ -1,0 +1,7 @@
+name: TogglePotions
+version: 1.01
+main: com.gmail.iaminavir.TogglePotions
+api-version: 1.15
+commands:
+  toggle:
+    aliases: [tpot, togglepotion, togglepotions ]
